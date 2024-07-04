@@ -1,3 +1,6 @@
+Sure! Here is your code with the comments removed:
+
+```css
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   display: flex;
@@ -51,3 +54,4 @@ p, button {
 #adviceDisplay.active {
   display: block;
 }
+```
