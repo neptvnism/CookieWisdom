@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   const adviceButton = document.getElementById('adviceButton');
   const adviceDisplay = document.getElementById('adviceDisplay');
+  const backgroundMusic = document.getElementById('backgroundMusic');
+  const muteButton = document.getElementById('muteButton');
 
   const adviceList = [
     "Never trust a dog to watch your food.",
@@ -52,8 +54,57 @@ document.addEventListener('DOMContentLoaded', function() {
     "To steal ideas from one person is plagiarism; to steal from many is research.",
     "If everything seems to be going well, you have obviously overlooked something.",
     "Never do anything that you wouldn’t want to explain to the paramedics.",
-    "It’s never too late to be what you want to be, unless you want to be younger. Then you’re screwed."
+    "It’s never too late to be what you want to be, unless you want to be younger. Then you’re screwed.",
+    "If you can't fix it with a hammer, you've got an electrical problem.",
+    "Behind every great man is a woman rolling her eyes.",
+    "Change is good, but dollars are better.",
+    "I'm not arguing, I'm just explaining why I'm right.",
+    "To err is human; to blame it on someone else is even more human.",
+    "The only mystery in life is why the kamikaze pilots wore helmets.",
+    "I used to be indecisive. Now I'm not sure.",
+    "My mind's made up, don't confuse me with facts.",
+    "You're never too old to learn something stupid.",
+    "Age is merely the number of years the world has been enjoying you.",
+    "If at first you don't succeed, then skydiving definitely isn't for you.",
+    "If you think education is expensive, try ignorance.",
+    "I didn't say it was your fault, I said I was blaming you.",
+    "Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a fruit salad.",
+    "If two wrongs don't make a right, try three.",
+    "The quickest way to double your money is to fold it over and put it back in your pocket.",
+    "I'm not lazy, I'm just very relaxed.",
+    "If you think nobody cares about you, try missing a couple of payments.",
+    "Laugh at your problems, everybody else does.",
+    "If everything seems under control, you're just not going fast enough.",
+    "My fake plants died because I did not pretend to water them.",
+    "If at first you don't succeed, destroy all evidence that you tried.",
+    "Always remember that you're unique. Just like everyone else.",
+    "A balanced diet means a cupcake in each hand.",
+    "If you can't convince them, confuse them.",
+    "How is it that one match can start a forest fire, but it takes a whole box to start a campfire?",
+    "I am on a seafood diet. I see food, and I eat it.",
+    "You know you’re getting old when your back goes out more than you do.",
+    "I don’t suffer from insanity. I enjoy every minute of it.",
+    "I am so clever that sometimes I don't understand a single word of what I am saying.",
+    "Behind every successful man is a surprised mother-in-law.",
+    "Common sense is like deodorant. The people who need it most never use it.",
+    "Money can't buy happiness, but it can buy a yacht big enough to pull up right alongside it.",
+    "My therapist says I have a preoccupation with vengeance. We'll see about that.",
+    "Change is inevitable, except from a vending machine."
   ];
+
+  // Play background music when the page loads
+  backgroundMusic.play();
+
+  // Mute/unmute functionality
+  muteButton.addEventListener('click', function() {
+    if (backgroundMusic.muted) {
+      backgroundMusic.muted = false;
+      muteButton.textContent = "Mute";
+    } else {
+      backgroundMusic.muted = true;
+      muteButton.textContent = "Unmute";
+    }
+  });
 
   adviceButton.addEventListener('click', function() {
     const randomAdvice = adviceList[Math.floor(Math.random() * adviceList.length)];
